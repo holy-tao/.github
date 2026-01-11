@@ -1,0 +1,101 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide as much detail as possible to help us reproduce and fix the issue.
+  
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: Describe the bug or unexpected behavior you encountered
+      placeholder: "When I ran... the output was... instead of..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should have happened?
+      description: What did you expect to happen instead?
+      placeholder: "I expected..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this issue? Please be as specific as possible.
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. Enter...
+        4. See error
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment
+      description: What environment are you running in?
+      placeholder: |
+        - OS: [e.g. macOS 14.1, Windows 11, Ubuntu 22.04]
+        - Version: [e.g. 1.2.3]
+        - Browser (if applicable): [e.g. Chrome 120, Firefox 121]
+      render: markdown
+    validations:
+      required: true
+  
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      description: If applicable, paste any error messages, stack traces, or relevant logs
+      render: shell
+    validations:
+      required: false
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: If applicable, add screenshots or screen recordings to help explain the problem
+      placeholder: Drag and drop images or paste them here
+    validations:
+      required: false
+  
+  - type: textarea
+    id: workarounds
+    attributes:
+      label: Workarounds
+      description: Have you found any way to avoid or work around this issue?
+      placeholder: "I can avoid this by..."
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      description: Can you reproduce this consistently?
+      options:
+        - Every time
+        - Sometimes
+        - Rarely
+        - Only once
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Anything else we should know about this issue?
+    validations:
+      required: false
